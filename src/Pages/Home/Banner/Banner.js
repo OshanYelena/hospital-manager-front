@@ -73,13 +73,13 @@ const Banner = ({ getAllPatients, getPatients }) => {
             </div>
             <div>
               <Typography sx={{ fontWeight: "800" }}>
-                {details.posts.length &&  details.posts.length}
+                {details.posts &&  details.posts.length}
               </Typography>
               <p>Doctors</p>
             </div>
           </Box>
           <Typography>
-            {details.posts.length && details.posts.length - 1} doctors joined today
+            {details.posts && details.posts.length - 1} doctors joined today
           </Typography>
         </Paper>
         <Paper elevation={2} sx={{ padding: "1rem", width: "14rem" }}>
@@ -103,14 +103,14 @@ const Banner = ({ getAllPatients, getPatients }) => {
             </div>
             <div>
               <Typography sx={{ fontWeight: "800" }}>
-                {details.patients.length && details.patients.length}
+                {details.patients && details.patients.length}
               </Typography>
               <p>Patients</p>
             </div>
           </Box>
           <Typography>
             
-            {details.allPatients.length && details.allPatients.length - 2} new patients admitted
+            {details.allPatients && details.allPatients.length - 2} new patients admitted
           </Typography>
         </Paper>
         <Paper elevation={2} sx={{ padding: "1rem", width: "14rem" }}>
@@ -134,13 +134,13 @@ const Banner = ({ getAllPatients, getPatients }) => {
             </div>
             <div>
               <Typography sx={{ fontWeight: "800" }}>
-                {details.patients.length && details.patients.length}
+                {details.patients && details.patients.length}
               </Typography>
               <p>Stuffs</p>
             </div>
           </Box>
           <Typography>
-            {details.patients.length && details.patients.length - 2} appointments are on vacation
+            {details.patients && details.patients.length - 2} appointments are on vacation
           </Typography>
         </Paper>
 
