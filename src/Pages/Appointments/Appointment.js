@@ -30,6 +30,7 @@ const Appointment = ({ createAppointment }) => {
   };
 
   const onChange = async (e) => {
+    setAppointment();
     e.preventDefault();
     setTime(e.target.value);
     console.log(e.target.value);
@@ -159,40 +160,45 @@ const Appointment = ({ createAppointment }) => {
           <>
             {" "}
             <Grid sx={{ mt: 2 }} container spacing={2}>
-              <Grid item xs={12} md={4}>
-                <h4>Avaliable Appointments</h4>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <input
-                  // className="datetime"
-                  name="date"
-                  value={appoinment}
-                  // type={"date"}
-                  // onChange={onChange}
-                />
-              </Grid>
+              {appoinment === 0 && (
+                <>
+                  {" "}
+                  <Grid item xs={12} md={4}>
+                    <h4>No Avilable Appointments On that Day!</h4>
+                  </Grid>
+                </>
+              )}
             </Grid>
-            <hr style={{ marginTop: "2rem", width: "80%" }} />
-            <Box
-              style={{ display: "flex" }}
-              sx={{ ml: { md: "8rem", xs: "2rem" } }}
-            >
-              <input
-                style={{
-                  background: "#8758FF",
-                  color: "#FAF5FA ",
-                  fontWeight: 800,
-                  marginBottom: "1rem",
-                  marginTop: "1rem",
-                  padding: "1rem 3rem",
-                  fontSize: "1rem",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-                type="submit"
-              />
-            </Box>
+            {appoinment && (
+              <>
+                {" "}
+                {appoinment !== 0 && (
+                  <>
+                    <hr style={{ marginTop: "2rem", width: "80%" }} />
+                    <Box
+                      style={{ display: "flex" }}
+                      sx={{ ml: { md: "8rem", xs: "2rem" } }}
+                    >
+                      <input
+                        style={{
+                          background: "#8758FF",
+                          color: "#FAF5FA ",
+                          fontWeight: 800,
+                          marginBottom: "1rem",
+                          marginTop: "1rem",
+                          padding: "1rem 3rem",
+                          fontSize: "1rem",
+                          borderRadius: "5px",
+                          cursor: "pointer",
+                          border: "none",
+                        }}
+                        type="submit"
+                      />
+                    </Box>
+                  </>
+                )}
+              </>
+            )}
           </>
         )}
       </form>

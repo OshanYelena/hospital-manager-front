@@ -46,7 +46,7 @@ const PatientViewDoctor = ({ isAuthenticated, post, getPosts }) => {
           <TableContainer component={Paper}>
             {
               <Typography variant="h6" sx={{ my: 3 }}>
-                Total available doctors: {details.posts.length}
+                Total available doctors: { details.posts.length}
               </Typography>
             }
             <Table
@@ -65,11 +65,11 @@ const PatientViewDoctor = ({ isAuthenticated, post, getPosts }) => {
                     <br />
                     Hours
                   </TableCell>
-                  <TableCell align="center">
+                  {/* <TableCell align="center">
                     Available
                     <br />
                     Appointments
-                  </TableCell>
+                  </TableCell> */}
                   <TableCell align="center">
                     Fee
                     <br />
