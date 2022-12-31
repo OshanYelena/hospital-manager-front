@@ -42,6 +42,7 @@ const Appointment = ({ createAppointment }) => {
           },
         })
         .then(({ data }) => data);
+        console.log(data)
       setAppointment(data);
     } catch (err) {
       alert(err.response.data.msg);
