@@ -1,0 +1,43 @@
+/* .alert {
+  top: 75px;
+  z-index: 10;
+  position: fixed;
+  width: 70%;
+  max-width: 1000px;
+  min-width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  color: black;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  top: 70px;
+  z-index: 10;
+  position: fixed;
+  width: 100%
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
